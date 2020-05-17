@@ -14,7 +14,11 @@ def translate(word):
        
         #excute if word exist
         return data[word]
-       
+
+    elif word.title() in data:
+
+        return data[word.title()]
+
         #chek with the pattern matchig lib to get the word
     elif len(get_close_matches(word,data.keys())) > 0:
          
@@ -47,5 +51,5 @@ if type(result) == list :
         print(item)
 
 else:
-    
+
     print(result)
